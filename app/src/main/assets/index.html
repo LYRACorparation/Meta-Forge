@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0B0912" />
+  <title>Meta-Forge</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg"><span class="glow g1"></span><span class="glow g2"></span><span class="grid"></span></div>
+  <div class="app">
+    <header class="hero card">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="44" height="44" fill="none"><path d="M32 6l18 12v28L32 58 14 46V18L32 6z" fill="#A855F7"/><path d="M32 12l13 9v22l-13 9-13-9V21l13-9z" fill="#7E22CE"/><path d="M32 22l6 8-6 8-6-8 6-8z" fill="#fff"/></svg>
+        </div>
+        <div>
+          <div class="eyebrow">LYRA corp</div>
+          <h1>Meta-Forge</h1>
+          <p class="tagline">A VR mod hub for discovering, downloading, and organizing mods across your favorite Meta games.</p>
+        </div>
+      </div>
+      <div class="hero-meta">
+        <div class="pill"><span class="k">Version</span><span class="v">1.0.0</span></div>
+        <div class="pill"><span class="k">Platform</span><span class="v">Meta</span></div>
+        <div class="pill"><span class="k">Status</span><span class="v" id="globalStatus">Verified Catalog + Live Sources</span></div>
+      </div>
+    </header>
+
+    <nav class="tabs" aria-label="Sections">
+      <button class="tab active" data-tab="home">Home</button>
+      <button class="tab" data-tab="browse">Browse</button>
+      <button class="tab" data-tab="games">Games</button>
+      <button class="tab" data-tab="library">Library</button>
+      <button class="tab" data-tab="info">Info</button>
+    </nav>
+
+    <section class="toolbar card">
+      <input id="search" type="search" placeholder="Search mods, games, authors..." autocomplete="off" />
+      <select id="gameFilter" aria-label="Game filter"></select>
+      <select id="statusFilter" aria-label="Status filter">
+        <option value="all">All statuses</option>
+        <option value="Verified">Verified</option>
+        <option value="Unidentified">Unidentified</option>
+      </select>
+    </section>
+
+    <main id="view"></main>
+
+    <footer class="footer">
+      <span>Released by <b>LYRA corp</b></span>
+      <span>•</span>
+      <span id="deviceLine">Meta-Forge 1.0.0</span>
+    </footer>
+  </div>
+  <div id="toast" class="toast hidden"></div>
+  <div id="modalRoot"></div>
+  <script src="catalog.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
